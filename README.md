@@ -29,3 +29,4 @@
 <https://github.com/lvwzhen/Git-Tutorial>
 
 Pdf 版： <https://github.com/numbbbbb/Git-Tutorial-By-liaoxuefeng>
+Epub 版： <https://raw.githubusercontent.com/lvwzhen/Git-Tutorial/gh-pages/git-tutorial.epub>
