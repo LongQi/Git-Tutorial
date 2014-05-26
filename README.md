@@ -26,7 +26,10 @@
 <https://github.com/lvwzhen/>
 
 **项目地址**
-<https://github.com/lvwzhen/Git-Tutorial>
+Github: <https://github.com/lvwzhen/Git-Tutorial>
 
 Pdf 版： <https://github.com/numbbbbb/Git-Tutorial-By-liaoxuefeng>
+
 Epub 版： <https://raw.githubusercontent.com/lvwzhen/Git-Tutorial/gh-pages/git-tutorial.epub>
+
+Gitbook: <https://www.gitbook.io/book/lvwzhen/Git-Tutorial/>
