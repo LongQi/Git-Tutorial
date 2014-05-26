@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        
+        <meta charset="UTF-8">
+        <title>版本回退 | Git教程</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="">
+        <meta name="description" content="git">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        
+        <link rel="prev" href="../chapter-4/README.html" />
+        
+
+        <meta property="og:title" content="版本回退 | Git教程">
+        <meta property="og:site_name" content="Git教程">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+        
+    </head>
+    <body>
+        
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book"  data-level="4.1" data-basepath=".." data-revision="1401091605449">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Git教程</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li class="chapter " data-level="1" data-path="chapter-1/README.html">
+                
+                <a href="../chapter-1/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Git简介
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="chapter-1/1-1.html">
+                            
+                            <a href="../chapter-1/1-1.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Git的诞生
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="chapter-1/1-2.html">
+                            
+                            <a href="../chapter-1/1-2.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> 集中式vs分布式
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li class="chapter " data-level="2" data-path="chapter-2/README.html">
+                
+                <a href="../chapter-2/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> 安装Git
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="3" data-path="chapter-3/README.html">
+                
+                <a href="../chapter-3/README.html">
+                    <i class="fa fa-check"></i> <b>3.</b> 创建版本库
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="4" data-path="chapter-4/README.html">
+                
+                <a href="../chapter-4/README.html">
+                    <i class="fa fa-check"></i> <b>4.</b> 时光机穿梭
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="chapter-4/4-1.html">
+                            
+                            <a href="../chapter-4/4-1.html">
+                                <i class="fa fa-check"></i> <b>4.1.</b> 版本回退
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 100%;min-width: 85.71428571428571%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../chapter-1/README.html" title="Git简介" class="chapter done new-chapter" data-progress="1" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../chapter-1/1-1.html" title="Git的诞生" class="chapter done " data-progress="1.1" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../chapter-1/1-2.html" title="集中式vs分布式" class="chapter done " data-progress="1.2" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../chapter-2/README.html" title="安装Git" class="chapter done new-chapter" data-progress="2" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../chapter-3/README.html" title="创建版本库" class="chapter done new-chapter" data-progress="3" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../chapter-4/README.html" title="时光机穿梭" class="chapter done new-chapter" data-progress="4" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../chapter-4/4-1.html" title="版本回退" class="chapter done " data-progress="4.1" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_7">
+                    
+                        <h1 id="-">版本回退</h1>
+<p>现在，你已经学会了修改文件，然后把修改提交到Git版本库，现在，再练习一次，修改readme.txt文件如下：</p>
+<pre><code>Git is a distributed version control system.
+Git is free software distributed under the GPL.
+</code></pre><p>然后尝试提交：</p>
+<pre><code class="lang-shell">$ git add readme.txt
+$ git commit -m &quot;append GPL&quot;
+[master 3628164] append GPL
+1 file changed, 1 insertion(+), 1 deletion(-)
+</code></pre>
+<p>像这样，你不断对文件进行修改，然后不断提交修改到版本库里，就好比玩RPG游戏时，每通过一关就会自动把游戏状态存盘，如果某一关没过去，你还可以选择读取前一关的状态。有些时候，在打Boss之前，你会手动存盘，以便万一打Boss失败了，可以从最近的地方重新开始。Git也是一样，每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。一旦你把文件改乱了，或者误删了文件，还可以从最近的一个commit恢复，然后继续工作，而不是把几个月的工作成果全部丢失。</p>
+<p>现在，我们回顾一下readme.txt文件一共有几个版本被提交到Git仓库里了：</p>
+<p>版本1：wrote a readme file</p>
+<pre><code>Git is a version control system.
+Git is free software.
+</code></pre><p>版本2：add distributed</p>
+<pre><code>Git is a distributed version control system.
+Git is free software.
+</code></pre><p>版本3：append GPL</p>
+<pre><code>Git is a distributed version control system.
+Git is free software distributed under the GPL.
+</code></pre><p>当然了，在实际工作中，我们脑子里怎么可能记得一个几千行的文件每次都改了什么内容，不然要版本控制系统干什么。版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看：</p>
+<pre><code class="lang-shell">$ git log
+commit 3628164fb26d48395383f8f31179f24e0882e1e0
+Author: Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date:   Tue Aug 20 15:11:49 2013 +0800
+</code></pre>
+<p>  append GPL</p>
+<pre><code class="lang-shell">commit ea34578d5496d7dd233c827ed32a8cd576c5ee85
+Author: Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date:   Tue Aug 20 14:53:12 2013 +0800 
+add distributed
+
+commit cb926e7ea50ad11b8f9e909c05226233bf755030
+Author: Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date:   Mon Aug 19 17:51:55 2013 +0800 
+    wrote a readme file
+</code></pre>
+<p>git log命令显示从最近到最远的提交日志，我们可以看到3次提交，最近的一次是“append GPL”，上一次是“add distributed”，最早的一次是“wrote a readme file”。 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上 --pretty=oneline参数：</p>
+<pre><code class="lang-shell">$ git log --pretty=oneline
+3628164fb26d48395383f8f31179f24e0882e1e0 append GPL
+ea34578d5496d7dd233c827ed32a8cd576c5ee85 add distributed
+cb926e7ea50ad11b8f9e909c05226233bf755030 wrote a readme file
+</code></pre>
+<p>需要友情提示的是，你看到的一大串类似“ 3628164...882e1e0”的是commit id（版本号），和SVN不一样，Git的commit id不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的commit id和我的肯定不一样，以你自己的为准。为什么commit id需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，后面我们还要研究多人在同一个版本库里工作，如果大家都用1，2，3……作为版本号，那肯定就冲突了。</p>
+<p>每提交一个新版本，实际上Git就会把它们自动串成一条时间线。如果使用可视化工具查看Git历史，就可以更清楚地看到提交历史的时间线：</p>
+<p><code>git-log-timeline</code></p>
+<p>好了，现在我们启动时光穿梭机，准备把readme.txt回退到上一个版本，也就是“add distributed”的那个版本，怎么做呢？</p>
+<p>首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交“ 3628164...882e1e0”（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
+<p>现在，我们要把当前版本“append GPL”回退到上一个版本“add distributed”，就可以使用git reset命令：</p>
+<pre><code class="lang-shell">$ git reset --hard HEAD^
+HEAD is now at ea34578 add distributed
+</code></pre>
+<p>--hard参数有啥意义？这个后面再讲，现在你先放心使用。</p>
+<p>看看readme.txt的内容是不是版本“add distributed”：</p>
+<pre><code class="lang-shell">$ cat readme.txt
+Git is a distributed version control system.
+Git is free software.
+</code></pre>
+<p>果然。</p>
+<p>还可以继续回退到上一个版本“wrote a readme file”，不过且慢，然我们用git log再看看现在版本库的状态：</p>
+<pre><code class="lang-shell">$ git log
+commit ea34578d5496d7dd233c827ed32a8cd576c5ee85
+Author: Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date:   Tue Aug 20 14:53:12 2013 +0800
+
+    add distributed
+
+commit cb926e7ea50ad11b8f9e909c05226233bf755030
+Author: Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date:   Mon Aug 19 17:51:55 2013 +0800
+
+    wrote a readme file
+</code></pre>
+<p>最新的那个版本“append GPL”已经看不到了！好比你从21世纪坐时光穿梭机来到了19世纪，想再回去已经回不去了，肿么办？</p>
+<p>办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个“append GPL”的commit id是“3628164...”，于是就可以指定回到未来的某个版本：</p>
+<pre><code>$ git reset --hard 3628164
+HEAD is now at 3628164 append GPL
+</code></pre><p>版本号没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。</p>
+<p>再小心翼翼地看看readme.txt的内容：</p>
+<pre><code>$ cat readme.txt
+Git is a distributed version control system.
+Git is free software distributed under the GPL.
+</code></pre><p>果然，我胡汉山又回来了。</p>
+<p>Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向“append GPL”：</p>
+<p><code>git-head</code></p>
+<p>改为指向“add distributed”：</p>
+<p><code>git-head-move</code></p>
+<p>然后顺便把工作区的文件更新了。所以你让HEAD指向哪个版本号，你就把当前版本定位在哪。</p>
+<p>现在，你回退到了某个版本，关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit id怎么办？</p>
+<p>在Git中，总是有后悔药可以吃的。当你用$ git reset --hard HEAD^回退到“add distributed”版本时，再想恢复到“append GPL”，就必须找到“append GPL”的commit id。Git提供了一个命令git reflog用来记录你的每一次命令：</p>
+<pre><code>$ git reflog
+ea34578 HEAD@{0}: reset: moving to HEAD^
+3628164 HEAD@{1}: commit: append GPL
+ea34578 HEAD@{2}: commit: add distributed
+cb926e7 HEAD@{3}: commit (initial): wrote a readme file
+</code></pre><p>终于舒了口气，第二行显示“append GPL”的commit id是3628164，现在，你又可以乘坐时光机回到未来了。</p>
+<h2 id="-">小结</h2>
+<p>现在总结一下：</p>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。</p>
+<p>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。</p>
+<p>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter-4/README.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 时光机穿梭"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
