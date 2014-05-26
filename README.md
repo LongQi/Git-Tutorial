@@ -24,3 +24,8 @@
 **电子书作者**
 
 <https://github.com/lvwzhen/>
+
+**项目地址**
+<https://github.com/lvwzhen/Git-Tutorial>
+
+Pdf 版： <https://github.com/numbbbbb/Git-Tutorial-By-liaoxuefeng>
